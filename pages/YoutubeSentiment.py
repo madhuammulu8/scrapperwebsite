@@ -25,6 +25,7 @@ def search_videos_by_keyword(api_key, keyword, max_results=10):
         
         comments_disabled = False
         video_comments = ''
+        comment_sentiment = {'compound': 0.0}  # Default value if comments are disabled
 
         try:
             # Fetch comments for the video
