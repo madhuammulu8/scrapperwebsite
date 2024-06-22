@@ -11,7 +11,7 @@ def get_interest_over_time(keywords):
 
     for a in range(0, len(keywords), 5):
         keyword = keywords[a:a+5]
-        pytrend.build_payload(kw_list=keyword, timeframe='2023-04-23 2024-04-23', geo='US')
+        pytrend.build_payload(kw_list=keyword, geo='US')
         
         try:
             interest_over_time_df = pytrend.interest_over_time().reset_index()
